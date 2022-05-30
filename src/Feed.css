@@ -1,0 +1,111 @@
+.feed{
+    flex:0.5;
+    border-right: 1px solid var(--twitter-background);
+    min-width:fit-content;
+    overflow-y:scroll;
+}
+
+@media screen and (min-width:700px){
+    .feed_links{
+        display: none;
+    }
+}
+
+
+.feed__header{
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+}
+.feed::-webkit-scrollbar{
+    display: none;
+}
+.feed{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feed__header > h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width:900px){
+    .feed{
+        flex: 1;
+    }
+    .feed_links{
+        display:flex;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        z-index: 10000000000000000;
+        position:fixed;
+        background-color: white;
+        bottom: 0;
+        border: 1px solid red;
+        margin-top: 20px;
+    }
+    /* .feed{
+        -ms-overflow-style:auto;
+        scrollbar-width:auto; */
+    /* .feed::-webkit-scrollbar{
+        display:auto;
+    } */
+    .eachfeedlink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        background-color: var(--twitter-blue);
+    }
+    .eachfeedlink:hover{
+        border-radius: 35px;
+        width: 40px;
+        height: 40px;
+        color: white;
+        background-color: #d2d5d8;
+    }
+    .icon_nav:hover{
+        color:'#50b7f5'
+    }
+}
+
+@media screen and (max-width:600px){
+    .feed{
+        flex: 1;
+    }
+    .eachfeedlink:nth-child(6){
+        display: none;
+    }
+    .eachfeedlink:nth-child(8){
+        display: none;
+    }
+    .eachfeedlink:nth-child(7){
+        display: none;
+    }
+    .eachfeedlink{
+        margin: 10px;
+    }   
+    .feed_links{
+        justify-content: space-evenly;
+        overflow-y: hidden;
+    }
+
+}
+
+@media screen and (max-width:400px){
+   
+    .feed{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+}

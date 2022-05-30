@@ -1,0 +1,22 @@
+.nothing{
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: x-large;
+}
+
+.icon_nothing{
+    margin-top:0;
+    display:absolute;
+}
+.nothing_two{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:900px){
+    .nothing{
+        flex: 1.0;
+    }
+}
